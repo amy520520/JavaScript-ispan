@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input id="a" type="number" oninput="calc()"> + 
+      <input id="b" type="number" oninput="calc()">
+      <span id="c"></span>
+    </div>
+    
+    <script>
+      const a = document.querySelector('#a');
+      const b = document.querySelector('#b');
+      const c = document.querySelector('#c');
+
+      function calc(){
+        c.innerHTML = +a.value + +b.value
+        // c.innerHTML = a.value * b.value
+      }
+
+
+    </script>
+  </body>
+</html>

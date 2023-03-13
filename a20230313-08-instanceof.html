@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="info">123</div>
+    <a href="https://tw.yahoo.com">yahoo</a>
+    
+    <script>
+      const info = document.querySelector('#info');
+      console.log(info.constructor.name);  // HTMLDivElement
+
+      const a_tag = document.querySelector('a');
+      console.log(a_tag.constructor.name);  // HTMLAnchorElement
+
+      console.log( a_tag instanceof HTMLAnchorElement);
+      console.log( a_tag instanceof HTMLDivElement);
+      console.log( a_tag instanceof Element);
+      console.log( a_tag instanceof Node);
+
+    </script>
+  </body>
+</html>
