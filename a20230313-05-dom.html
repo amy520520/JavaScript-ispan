@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="info">123</div>
+    <div id="info">456</div>
+    <div id="myName">David</div>
+    <div class="my-class">abc</div>
+    <div class="my-class">def</div>
+    <script>
+      console.log(myName)
+      console.log(info)
+
+      const myName2 = document.getElementById('myName');
+      const myName3 = document.querySelector('#myName');
+      const myName4 = $('#myName');
+      console.log('myName2:', myName2);
+      console.log('myName3:', myName3);
+      console.log('myName4:', myName4);
+
+      // 只會拿到第一個
+      const myClass1 = document.querySelector('.my-class');
+
+      // 取得全部的元素
+      const myClass2 = document.querySelectorAll('.my-class');
+      
+      const myClass3 = $('.my-class');
+      console.log('myClass1:', myClass1);
+      console.log('myClass2:', myClass2);
+      console.log('myClass3:', myClass3);
+    </script>
+  </body>
+</html>
