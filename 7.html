@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      const obj1 = {
+        name: 'david',
+        gender: 'male',
+        age: 28,
+      };
+
+      const obj2 = obj1; 
+      const obj3 = Object.assign({}, obj1);
+
+   
+      const obj4 = { ...obj1 };
+      const obj5 = { ...obj1, name: 'John' }; 
+      const obj6 = { ...obj1 };
+
+      obj1.name = 'Peter';
+      obj4.name = 'Carl';
+
+      info.innerHTML += `obj2.name: ${obj2.name} <br>`;
+      info.innerHTML += `obj3.name: ${obj3.name} <br>`;
+      info.innerHTML += `obj4.name: ${obj4.name} <br>`;
+      info.innerHTML += `obj5.name: ${obj5.name} <br>`;
+      info.innerHTML += `obj6.name: ${obj6.name} <br>`;
+
+
+    </script>
+  </body>
+</html>

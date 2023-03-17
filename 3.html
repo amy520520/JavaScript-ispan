@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+
+        border: 1px solid gray;
+      }
+
+      .ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ee6d31;
+        text-align: center;
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect">
+      <!--
+      <div class="ball">88</div>
+      -->
+    </div>
+    <script>
+      const rect = document.querySelector(".rect");
+      let b;
+
+      let html = "";
+
+      for (let i = 0; i < 16; i++) {
+        for (let k = 0; k < 16; k++) {
+          let colorNum = (i*17)*256*256+ (k*17)*256;
+
+          let colorStr = '#' + colorNum.toString(16).padStart(6, '0')
+
+          html += `<div data-color="${colorStr}" class="ball" style="left: ${i * 40}px; top: ${
+            k * 40
+          }px; background-color: rgb(${i*17}, 0, ${k*17});" onclick="console.log(event.target.getAttribute('data-color'))"></div>`;
+        }
+      }
+
+      rect.innerHTML = html;
+    </script>
+  </body>
+</html>

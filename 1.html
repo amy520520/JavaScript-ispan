@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: #d8eff7;
+        border: 1px solid gray;
+      }
+
+      .ball {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #ee6d31;
+        text-align: center;
+        line-height: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        border: 1px solid gray;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="rect">
+      <!--
+      <div class="ball">88</div>
+      -->
+    </div>
+    <script>
+      const rect = document.querySelector('.rect');
+      const str = '�腼銝剜���㕑迂憭𡁏�擧�笔撥��栞����憭𡁏�𤾸側���'
+    //   for( i=0;i<10;i++){
+    //         b = document.createElement('div');
+    //         b.className = 'ball';
+    //         b.innerHTML = i+1;
+    //         b.style.left = `${i*70}px`;
+    //         b.style.top = `${i*50}px`;
+
+    //         rect.append(b);
+    //   }
+    //   for( i=0;i<10;i++){
+    //         b = document.createElement('div');
+    //         b.className = 'ball';
+    //         b.innerHTML = str.charAt(i);
+    //         b.style.left = `${i*70}px`;
+    //         b.style.top = `${i*50}px`;
+
+    //         rect.append(b);
+    //   }
+
+      for( i=0; i<str.length ; i++){
+            b = document.createElement('div');
+            b.className = 'ball';
+            b.innerHTML = i+str.charAt(i);
+            b.style.left = `${i % 5*70}px`;
+            b.style.top = `${parseInt(i/5)*70}px`;
+
+            rect.append(b);
+      }
+        
+
+    </script>
+  </body>
+
+</html>

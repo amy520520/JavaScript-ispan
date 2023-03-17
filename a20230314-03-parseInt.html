@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>十六進位字串轉數值:</div>
+    <input type="text" id="input1" oninput="func()" />
+    <div id="info1"></div>
+    <hr>
+    <div>數值轉十六進位字串:</div>
+    <input type="text" id="input2" oninput="func()" />
+    <div id="info2"></div>
+
+    <script>
+      const input1 = document.querySelector("#input1");
+      const input2 = document.querySelector("#input2");
+
+      function func() {
+        info1.innerHTML = parseInt(input1.value, 16);
+
+        const i2 = + input2.value; // 先轉換為數值
+        info2.innerHTML = i2.toString(16).toUpperCase();
+      }
+    </script>
+  </body>
+</html>

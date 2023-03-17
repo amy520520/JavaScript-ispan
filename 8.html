@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+  </head>
+  <body>
+    <div id="info"></div>
+    <pre id="info2"></pre>
+
+    <script>
+      const ar1 = ['Flora', 24, 'female', {data: 123}];
+
+      for(let v of ar1){
+        info.innerHTML += `${v}: ${ typeof v }<br>`;
+      }
+
+      info2.innerHTML = JSON.stringify(ar1,null, 4);
+
+    </script>
+  </body>
+</html>
