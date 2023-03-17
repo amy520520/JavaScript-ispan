@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+  </head>
+  <body>
+    <pre id="info"></pre>
+
+    <script>
+      const ar1 = [3, 6, 'hello', 12];
+
+      const item = ar1.pop();  // ���堺��緇�筝�����膣�
+
+      info.innerHTML += JSON.stringify(ar1, null, 4) + '\n';
+      info.innerHTML += item + '\n';
+
+      ar1.push('vic');
+      info.innerHTML += JSON.stringify(ar1, null, 4) + '\n';
+
+      const ar2 = [...ar1, 'john'];
+      info.innerHTML += JSON.stringify(ar2, null, 4) + '\n';
+
+      const item2 = ar1.shift();
+      info.innerHTML += JSON.stringify(ar1, null, 4) + '\n';
+    </script>
+  </body>
+</html>
