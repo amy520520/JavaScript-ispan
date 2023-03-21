@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <style>
+      .rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: #d8eff7;
+        border: 1px solid gray;
+      }
+
+      .ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ee6d31;
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="startBall()">start</button>
+
+    <button onclick="stopBall()">stop</button>
+    <div class="rect">
+      <div class="ball" style="left: 10px"></div>
+    </div>
+    <script>
+    //   const ball = document.querySelector(".ball");
+
+    //   let interval_id;  // 為了接收計時器的編號
+
+    //   function startBall() {
+    //     interval_id = setInterval(() => {
+    //       const left = parseInt(ball.style.left);
+    //       ball.style.left = left + 5 + "px";
+    //     }, 30);
+    //   }
+
+    //   function stopBall() {
+    //     clearInterval(interval_id)
+    //   }
+
+
+    const ball=document.querySelector(".ball");
+
+    let interval_id;
+
+
+    //定時器
+    function startBall(){
+        interval_id =setInterval(()=>{
+            const left = parseInt(ball.style.left);
+            ball.style.left = left+ 5 + "px" ; //函數將球的左邊距（left）值增加5像素
+        },30) //設置了每30毫秒執行一次
+    }
+
+
+    //停止球的移動
+    function stopBall(){
+        clearInterval(interval_id)
+    }
+
+    </script>
+  </body>
+</html>

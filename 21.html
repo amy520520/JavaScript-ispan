@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <style>
+      .clock {
+        position: relative;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background-color: #d8eff7;
+        border: 1px solid gray;
+      }
+
+      .hand {
+        position: absolute;
+        left: 300px;
+        top: 300px;
+      }
+      .hand-sec {
+        position: absolute;
+        width: 2px;
+        height: 300px;
+        left: -1px;
+        top: -300px;
+        /* border-radius: 50%; */
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hand" id="secHand">
+        <div class="hand-sec"></div>
+      </div>
+    </div>
+  
+    <script>
+    //   const secHand = document.querySelector('#secHand')
+
+    //   secHand.style.transform = `rotate(30deg)`
+
+    const secHand = document.querySelector('#secHand')
+
+    function runClock(){
+        const now = new Date();
+        secHand.style.transform =`rotate(${now.getSeconds()*6}deg)`
+        setTimeout(runClock,1000);
+    }
+
+    runClock()
+
+    // secHand.style.transform =`rotate(30deg)`
+
+
+    </script>
+  </body>
+</html>
